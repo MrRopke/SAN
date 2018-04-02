@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialAdd.View.HomeDetail"
+             Title="Home"
+             >
+    <StackLayout BackgroundColor="#03A9F4">
+        <StackLayout Padding="10" >
+            <Label Text="Social ADHD Network" FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+        </StackLayout>
+
+        <StackLayout Padding="50">
+            <Entry Placeholder="Brugernavn/E-mail" HorizontalOptions="FillAndExpand"/>
+            <Entry Placeholder="Kodeord" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Login" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Opret Bruger" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage> 

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialAdd.View.Blog"
+             Title="Bruger Råd">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical">
+
+            <StackLayout BackgroundColor="#03A9F4" HorizontalOptions="FillAndExpand" HeightRequest="100">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                     Tapped="StackTapped" 
+                     CommandParameter="Søvn"
+                     NumberOfTapsRequired="1">
+                    </TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+                <Label Text="Søvn" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="#99ccff" HorizontalOptions="FillAndExpand" HeightRequest="100">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                     Tapped="StackTapped" 
+                     CommandParameter="Struktur"
+                     NumberOfTapsRequired="1">
+                    </TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+                <Label Text="Stuktur" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="#03A9F4" HorizontalOptions="FillAndExpand" HeightRequest="100">
+                <Label Text="Fokus" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+                <StackLayout BackgroundColor="#99ccff" HorizontalOptions="FillAndExpand" HeightRequest="100">
+                <Label Text="Arbejde" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+            <StackLayout BackgroundColor="#03A9F4" HorizontalOptions="FillAndExpand" HeightRequest="100">
+                <Label Text="Tanker" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="#99ccff" HorizontalOptions="FillAndExpand" HeightRequest="100">
+                <Label Text="Indre Ro" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+ 
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialAdd.View.Profil"
+             Title="Profil">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#03A9F4" Padding="20">
+                <Label Text="{Binding Bruger.Brugernavn}" FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                <Label Text="Bruger Information" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="{Binding Bruger.Relation, StringFormat='Relation: {0:F0}'}" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                <Label Text="{Binding Bruger.Alder, StringFormat='Alder: {0:F0}'}" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                <Label Text="{Binding Bruger.BorI, StringFormat='Bor i: {0:F0}'}" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+              
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

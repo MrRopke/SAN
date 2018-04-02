@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialAdd.View.DetailDetail"
+             Title="Løsning">
+             
+    <ContentPage.Content>
+
+            <StackLayout Margin="10" VerticalOptions="FillAndExpand">
+                
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Løsning.Overskrift}" FontSize="Large" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="{Binding Løsning.Dato, StringFormat='Dato: {0:dd/MM/yy H:mm:ss}'}" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="{Binding Løsning.Brødtekst}" FontSize="Medium"/>
+                    <Label Text="{Binding Løsning.Forfatter, StringFormat='Af: {0:F0}'}" FontSize="Small"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Se Fordele" HorizontalOptions="FillAndExpand" Clicked="VisFordele"/>
+                    <Button Text="Se Ulemper" HorizontalOptions="FillAndExpand" Clicked="VisUlemper"/>
+                </StackLayout>
+
+            <StackLayout x:Name="KommentarFarve" HorizontalOptions="FillAndExpand">
+               
+                <ListView x:Name="KommentarView" 
+                          HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="20">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Overskrift}" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="Dato: 26/03/18 13:21" HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                    <Label Text="{Binding Kommentar}"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Af: Brugernavn" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding Likes, StringFormat='Likes: {0:F0}'}" HorizontalOptions="EndAndExpand"/>                                        
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+                
+            <StackLayout>
+            <Button x:Name="SkrivKommentarKnap" Text="Skriv kommentar" HorizontalOptions="FillAndExpand" IsVisible="False" Clicked="SkrivKommentar"/>
+            </StackLayout>
+
+            <StackLayout x:Name="SkrivKommentarStack" IsVisible="False">
+                <Entry Placeholder="Overskrift" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="Skriv kommentar .." HorizontalOptions="FillAndExpand" HeightRequest="100"/>
+                <Button Text="Send"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

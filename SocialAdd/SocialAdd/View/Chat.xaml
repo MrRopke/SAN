@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialAdd.View.Chat"
+             Title="Chat">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+
+            <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Beskeder" HorizontalOptions="CenterAndExpand"/>
+                    <ListView x:Name="ChatView"
+                          HasUnevenRows="True"
+                          >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                                <StackLayout Margin="20">
+                                    <Label Text="{Binding AfsenderNavn}"/>
+                                    <Label Text="{Binding Beskeden}"/>
+                                </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            </StackLayout>
+
+                <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="250" BackgroundColor="#03A9F4">
+                    <Label Text="Brugere" HorizontalOptions="CenterAndExpand"/>
+                    <ListView x:Name="BrugerView"
+                          HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="20">
+                                    <Label Text="{Binding Brugernavn}" TextColor="White"/>                                    
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="10" BackgroundColor="#03A9F4">
+            <Entry x:Name="BeskedEntry" Placeholder="Skriv her .." HorizontalOptions="FillAndExpand"/>
+                <Button Clicked="SkrivChatBesked" Text="Send"/>
+        </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

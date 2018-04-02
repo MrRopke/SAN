@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialAdd.View.TilføjRåd"
+             Title="Tilføj Råd">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry x:Name="OverskriftEntry" Placeholder="Skriv overskrift .." HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="RådEntry" Placeholder="Skriv dit råd .." HorizontalOptions="FillAndExpand" HeightRequest="250"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                <StackLayout>
+
+                    <Label Text="Vælg Råd-Genre" FontAttributes="Bold"/>
+                    <ListView x:Name="GenreValgListView"
+                      ItemTapped="TilføjValgte">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Valgte" FontAttributes="Bold"/>
+                    <ListView x:Name="ValgteListView"
+                          ItemTapped="FjernValgte">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding}"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                </StackLayout>
+
+            </StackLayout>
+
+            <Button Text="Send Opslag" Clicked="SendOpslag"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
